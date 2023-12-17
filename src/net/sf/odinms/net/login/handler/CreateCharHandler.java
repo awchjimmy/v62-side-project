@@ -36,11 +36,10 @@ public class CreateCharHandler extends AbstractMaplePacketHandler {
         newchar.setFace(face);
         newchar.setHair(hair + hairColor);
         newchar.setGender(gender);
-        newchar.setStr(4);
-        newchar.setDex(4);
-        newchar.setInt(4);
-        newchar.setLuk(4);
-        newchar.setRemainingAp(9);
+        newchar.setStr(str);
+        newchar.setDex(dex);
+        newchar.setInt(_int);
+        newchar.setLuk(luk);
         newchar.setName(name, false);
         newchar.setSkinColor(MapleSkinColor.getById(skinColor));
 
