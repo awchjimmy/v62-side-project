@@ -1,5 +1,16 @@
 # Recv
 
+### CHANGE_MAP
+When you enter a portal.
+
+|hex|desc|
+|----|----|
+|23 00|opcode|
+|01|skip|
+|FF FF FF FF|target id|
+|06 00 6E 65 78 74 30 30|portal name "next00"|
+|4A F0 B4 00 00 00 00|skip|
+
 ### GENERAL_CHAT
 When you speak to the public with the white bubble background.
 
