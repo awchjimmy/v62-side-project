@@ -1,5 +1,14 @@
 # Recv
 
+### CHARLIST_REQUEST
+You send a character listing request after selecting a server and a channel.
+
+|hex|desc|
+|----|----|
+|05 00|opcode|
+|00|server|
+|01|channel|
+
 ### CHANGE_MAP
 When you enter a portal.
 
