@@ -11,6 +11,15 @@ When you enter a portal.
 |06 00 6E 65 78 74 30 30|portal name "next00"|
 |4A F0 B4 00 00 00 00|skip|
 
+### CHANGE_CHANNEL
+When you change a channel.
+
+|hex|desc|
+|----|----|
+|24 00|opcode|
+|00|channel|
+|17 A1 3F 00|skip|
+
 ### GENERAL_CHAT
 When you speak to the public with the white bubble background.
 
