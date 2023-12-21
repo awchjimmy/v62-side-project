@@ -9,6 +9,13 @@ You send a character listing request after selecting a server and a channel.
 |00|server|
 |01|channel|
 
+### SERVERLIST_REQUEST
+You send a server listing request after you entered login credentials.
+
+|hex|desc|
+|----|----|
+|0B 00|opcode|
+
 ### CHANGE_MAP
 When you enter a portal.
 
