@@ -72,6 +72,16 @@ When you speak to the public with the white bubble background.
 |05 00 68 65 6C 6C 6F| message "hello" |
 |00| show            |
 
+### CHANGE_MAP_SPECIAL
+When you enter a portal.
+
+|hex|desc|
+|----|----|
+|5C 00|opcode|
+|01|skip|
+|09 00 74 75 74 6F 72 69 61 6C 30|portal name "tutorial0"|
+|6C 00 35 00|skip|
+
 ### PLAYER_UPDATE
 Notify backend to save data.
 
