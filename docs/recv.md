@@ -43,6 +43,13 @@ When you enter the Maple world.
 |31 75 00 00|character id|
 |00 00|skip|
 
+### RELOG
+When you exit game and go back to login screen.
+
+|hex|desc|
+|----|----|
+|1C 00|opcode|
+
 ### CHANGE_MAP
 When you enter a portal.
 
