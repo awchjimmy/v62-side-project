@@ -24,8 +24,18 @@ You send a server listing request after you entered login credentials.
 |----|----|
 |0B 00|opcode|
 
+### CHAR_SELECT
+When you select your character.
+
+|hex|desc|
+|----|----|
+|13 00|opcode|
+|31 75 00 00|character id|
+|11 00 30 30 2D 30 43 2D 32 39 2D 32 35 2D 34 33 2D 45 39|mac address "00-0C-29-25-43-E9"|
+|15 00 30 30 30 43 32 39 32 35 34 33 45 39 5F 38 30 37 37 33 46 41 38|skip "000C292543E9_80773FA8"|
+
 ### PLAYER_LOGGEDIN
-When you entered the Maple world.
+When you enter the Maple world.
 
 |hex|desc|
 |----|----|
@@ -56,8 +66,8 @@ When you change a channel.
 ### GENERAL_CHAT
 When you speak to the public with the white bubble background.
 
-|hex|desc|
-|----|----|
-|2E 00|opcode|
-|05 00 68 65 6C 6C 6F|mapleAsciiString "hello"|
-|00|show|
+|hex| desc            |
+|----|-----------------|
+|2E 00| opcode          |
+|05 00 68 65 6C 6C 6F| message "hello" |
+|00| show            |
