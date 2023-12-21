@@ -9,6 +9,14 @@ You send a character listing request after selecting a server and a channel.
 |00|server|
 |01|channel|
 
+### SERVERSTATUS_REQUEST
+You send a server status request after you selected a server.
+
+|hex|desc|
+|----|----|
+|06 00|opcode|
+|00 00|skip|
+
 ### SERVERLIST_REQUEST
 You send a server listing request after you entered login credentials.
 
