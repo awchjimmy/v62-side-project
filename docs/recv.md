@@ -24,6 +24,15 @@ You send a server listing request after you entered login credentials.
 |----|----|
 |0B 00|opcode|
 
+### PLAYER_LOGGEDIN
+When you entered the Maple world.
+
+|hex|desc|
+|----|----|
+|14 00|opcode
+|31 75 00 00|character id|
+|00 00|skip|
+
 ### CHANGE_MAP
 When you enter a portal.
 
