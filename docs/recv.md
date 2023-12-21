@@ -71,3 +71,10 @@ When you speak to the public with the white bubble background.
 |2E 00| opcode          |
 |05 00 68 65 6C 6C 6F| message "hello" |
 |00| show            |
+
+### PLAYER_UPDATE
+Notify backend to save data.
+
+|hex|desc|
+|----|----|
+|C0 00|opcode|
