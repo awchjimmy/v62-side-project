@@ -31,6 +31,13 @@ You send a server listing request after you entered login credentials.
 |----|----|
 |0B 00|opcode|
 
+### VIEW_ALL_CHAR
+When you view all characters.
+
+|hex|desc|
+|----|----|
+|0D 00|opcode|
+
 ### CHAR_SELECT
 When you select your character.
 
