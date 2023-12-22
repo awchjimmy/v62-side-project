@@ -3,6 +3,7 @@ package net.sf.odinms.net;
 import net.sf.odinms.client.MapleClient;
 import net.sf.odinms.net.channel.ChannelServer;
 import net.sf.odinms.net.login.LoginWorker;
+import net.sf.odinms.tools.HexTool;
 import net.sf.odinms.tools.MapleAESOFB;
 import net.sf.odinms.tools.MaplePacketCreator;
 import net.sf.odinms.tools.data.input.ByteArrayByteStream;
@@ -11,12 +12,15 @@ import net.sf.odinms.tools.data.input.SeekableLittleEndianAccessor;
 import org.apache.mina.common.IdleStatus;
 import org.apache.mina.common.IoHandlerAdapter;
 import org.apache.mina.common.IoSession;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class MapleServerHandler extends IoHandlerAdapter {
 
     private final static short MAPLE_VERSION = 62;
     private PacketProcessor processor;
     private int channel = -1;
+    private static Logger log = LoggerFactory.getLogger(MapleServerHandler.class);
 
     public MapleServerHandler(PacketProcessor processor) {
         this.processor = processor;
@@ -108,11 +112,11 @@ public class MapleServerHandler extends IoHandlerAdapter {
         if (packetHandler != null && packetHandler.validateState(client)) {
             try {
                 //if (trace) {
-                    //String from = "";
-                    //if (client.getPlayer() != null) {
-                        //from = "from " + client.getPlayer().getName() + " ";
-                    //}
-                //log.info("Got Message {}handled by {} ({}) {}\n{}", new Object[] { from, packetHandler.getClass().getSimpleName(), content.length, HexTool.toString(content), HexTool.toStringFromAscii(content) });
+                    String from = "";
+                    if (client.getPlayer() != null) {
+                        from = "from " + client.getPlayer().getName() + " ";
+                    }
+                    log.info("Got Message {}handled by {} ({}) {}\n{}", new Object[] { from, packetHandler.getClass().getSimpleName(), content.length, HexTool.toString(content), HexTool.toStringFromAscii(content) });
                 //}
                 packetHandler.handlePacket(slea, client);
             } catch (Throwable t) {
