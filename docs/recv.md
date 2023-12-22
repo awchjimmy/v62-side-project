@@ -65,6 +65,27 @@ Check if the name is available or not when you create a new character.
 |15 00|opcode|
 |09 00 61 77 63 68 6A 69 6D 6D 79|character name "awchjimmy"|
 
+### 0x16 CREATE_CHAR
+When you create a new character.
+
+|hex|desc|
+|----|----|
+|16 00|opcode|
+|09 00 61 77 63 68 6A 69 6D 6D 79|character name "awchjimmy"|
+|20 4E 00 00|face|
+|4E 75 00 00|hair|
+|00 00 00 00|hair color|
+|00 00 00 00|skin color|
+|82 DE 0F 00|top|
+|A2 2C 10 00|bottom|
+|81 5B 10 00|shoes|
+|F0 DD 13 00|weapon|
+|00|gender|
+|07|str|
+|07|dex|
+|06|int|
+|05|luk|
+
 ### 0x1A STRANGE_DATA
 Not sure. Server does not response to it.
 
