@@ -46,6 +46,17 @@ When you view all characters.
 |----|----|
 |0D 00|opcode|
 
+### 0x0E PICK_ALL_CHAR
+When you pick a character from "View All Characters" screen.
+
+|hex|desc|
+|----|----|
+|0E 00|opcode|
+|31 75 00 00|character id|
+|00 00 00 00|server|
+|11 00 30 30 2D 30 43 2D 32 39 2D 32 35 2D 34 33 2D 45 39|mac address "00-0C-29-25-43-E9"|
+|15 00 30 30 30 43 32 39 32 35 34 33 45 39 5F 38 30 37 37 33 46 41 38|skip "000C292543E9_80773FA8"|
+
 ### 0x13 CHAR_SELECT
 When you select your character.
 
