@@ -157,6 +157,19 @@ When you smile or frown or wink.
 |30 00|opcode|
 |04 00 00 00|expression id|
 
+### 0x51 HEAL_OVER_TIME
+You will heal over time.
+
+|hex|desc|
+|----|----|
+|51 00|opcode|
+|00|skip|
+|14 00|skip|
+|00|skip|
+|0A 00|heal hp|
+|00 00|heal mp|
+|00|skip|
+
 ### 0x5C CHANGE_MAP_SPECIAL
 When you enter a portal.
 
