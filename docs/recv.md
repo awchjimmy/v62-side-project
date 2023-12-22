@@ -170,6 +170,15 @@ You will heal over time.
 |00 00|heal mp|
 |00|skip|
 
+### 0x56 MESO_DROP
+When you drop mesos.
+
+|hex|desc|
+|----|----|
+|56 00|opcode|
+|3A F9 A4 00|skip|
+|0A 00 00 00|meso|
+
 ### 0x5C CHANGE_MAP_SPECIAL
 When you enter a portal.
 
