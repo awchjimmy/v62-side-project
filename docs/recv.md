@@ -89,6 +89,21 @@ When you enter a portal.
 |09 00 74 75 74 6F 72 69 61 6C 30|portal name "tutorial0"|
 |6C 00 35 00|skip|
 
+### CHANGE_KEYMAP
+When you change your keymap settings.
+
+|hex|desc|
+|----|----|
+|7B 00|opcode|
+|00 00 00 00|skip|
+|02 00 00 00|num changes|
+|1D 00 00 00|key (1)|
+|05|type (1)|
+|34 00 00 00|action (1)|
+|1E 00 00 00|key (2)|
+|00|type (2)|
+|34 00 00 00|action (2)|
+
 ### PLAYER_UPDATE
 Notify backend to save data.
 
