@@ -140,6 +140,14 @@ When you change a channel.
 |00|channel|
 |17 A1 3F 00|skip|
 
+### 0x25 ENTER_CASH_SHOP
+When you enter cash shop.
+
+|hex|desc|
+|----|----|
+|25 00|opcode|
+|ED A4 BB 00|skip|
+
 ### 0x2E GENERAL_CHAT
 When you speak to the public with the white bubble background.
 
