@@ -24,6 +24,14 @@ You send a server status request after you selected a server.
 |06 00|opcode|
 |00 00|skip|
 
+### 0x09 AFTER_LOGIN
+You send a pin request (or a skip pin request) after you entered your login credentials.
+
+|hex|desc|
+|----|----|
+|09 00|opcode|
+|01 01 FF 6A 01 00 00 00|skip|
+
 ### 0x0B SERVERLIST_REQUEST
 You send a server listing request after you entered login credentials.
 
