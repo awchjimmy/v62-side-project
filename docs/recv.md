@@ -212,6 +212,13 @@ When you change your keymap settings.
 |00|type (2)|
 |34 00 00 00|action (2)|
 
+### 0x87 ENTER_MTS
+When you enter Maple Trading System (MTS).
+
+|hex|desc|
+|----|----|
+|87 00|opcode|
+
 ### 0xAB ITEM_PICKUP
 When you pick up an item.
 
