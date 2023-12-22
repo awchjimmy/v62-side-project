@@ -1,5 +1,12 @@
 # Recv
 
+### SERVERLIST_REREQUEST
+You click 'Back' from character selection screen.
+
+|hex|desc|
+|----|----|
+|04 00|opcode|
+
 ### CHARLIST_REQUEST
 You send a character listing request after selecting a server and a channel.
 
