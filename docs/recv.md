@@ -204,6 +204,17 @@ When you change your keymap settings.
 |00|type (2)|
 |34 00 00 00|action (2)|
 
+### 0xAB ITEM_PICKUP
+When you pick up an item.
+
+|hex|desc|
+|----|----|
+|AB 00|opcode|
+|01|mode|
+|3A 17 A5 00|skip|
+|3A 05 D6 FF|skip|
+|65 00 00 00|object id|
+
 ### 0xC0 PLAYER_UPDATE
 Notify backend to save data.
 
