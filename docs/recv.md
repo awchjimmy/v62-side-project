@@ -1,13 +1,13 @@
 # Recv
 
-### SERVERLIST_REREQUEST
+### 0x04 SERVERLIST_REREQUEST
 You click 'Back' from character selection screen.
 
 |hex|desc|
 |----|----|
 |04 00|opcode|
 
-### CHARLIST_REQUEST
+### 0x05 CHARLIST_REQUEST
 You send a character listing request after selecting a server and a channel.
 
 |hex|desc|
@@ -16,7 +16,7 @@ You send a character listing request after selecting a server and a channel.
 |00|server|
 |01|channel|
 
-### SERVERSTATUS_REQUEST
+### 0x06 SERVERSTATUS_REQUEST
 You send a server status request after you selected a server.
 
 |hex|desc|
@@ -24,21 +24,21 @@ You send a server status request after you selected a server.
 |06 00|opcode|
 |00 00|skip|
 
-### SERVERLIST_REQUEST
+### 0x0B SERVERLIST_REQUEST
 You send a server listing request after you entered login credentials.
 
 |hex|desc|
 |----|----|
 |0B 00|opcode|
 
-### VIEW_ALL_CHAR
+### 0x0D VIEW_ALL_CHAR
 When you view all characters.
 
 |hex|desc|
 |----|----|
 |0D 00|opcode|
 
-### CHAR_SELECT
+### 0x13 CHAR_SELECT
 When you select your character.
 
 |hex|desc|
@@ -48,16 +48,16 @@ When you select your character.
 |11 00 30 30 2D 30 43 2D 32 39 2D 32 35 2D 34 33 2D 45 39|mac address "00-0C-29-25-43-E9"|
 |15 00 30 30 30 43 32 39 32 35 34 33 45 39 5F 38 30 37 37 33 46 41 38|skip "000C292543E9_80773FA8"|
 
-### PLAYER_LOGGEDIN
+### 0x14 PLAYER_LOGGEDIN
 When you enter the Maple world.
 
 |hex|desc|
 |----|----|
-|14 00|opcode
+|14 00|opcode|
 |31 75 00 00|character id|
 |00 00|skip|
 
-### CHECK_CHAR_NAME
+### 0x15 CHECK_CHAR_NAME
 Check if the name is available or not when you create a new character.
 
 |hex|desc|
@@ -65,7 +65,7 @@ Check if the name is available or not when you create a new character.
 |15 00|opcode|
 |09 00 61 77 63 68 6A 69 6D 6D 79|character name "awchjimmy"|
 
-### STRANGE_DATA
+### 0x1A STRANGE_DATA
 Not sure. Server does not response to it.
 
 |hex|desc|
@@ -73,14 +73,14 @@ Not sure. Server does not response to it.
 |1A 00|opcode|
 |01 81 E6 03 E9 00 00 00 00|skip|
 
-### RELOG
+### 0x1C RELOG
 When you exit game and go back to login screen.
 
 |hex|desc|
 |----|----|
 |1C 00|opcode|
 
-### CHANGE_MAP
+### 0x23 CHANGE_MAP
 When you enter a portal.
 
 |hex|desc|
@@ -91,7 +91,7 @@ When you enter a portal.
 |06 00 6E 65 78 74 30 30|portal name "next00"|
 |4A F0 B4 00 00 00 00|skip|
 
-### CHANGE_CHANNEL
+### 0x24 CHANGE_CHANNEL
 When you change a channel.
 
 |hex|desc|
@@ -100,7 +100,7 @@ When you change a channel.
 |00|channel|
 |17 A1 3F 00|skip|
 
-### GENERAL_CHAT
+### 0x2E GENERAL_CHAT
 When you speak to the public with the white bubble background.
 
 |hex| desc            |
@@ -109,7 +109,7 @@ When you speak to the public with the white bubble background.
 |05 00 68 65 6C 6C 6F| message "hello" |
 |00| show            |
 
-### CHANGE_MAP_SPECIAL
+### 0x5C CHANGE_MAP_SPECIAL
 When you enter a portal.
 
 |hex|desc|
@@ -119,7 +119,7 @@ When you enter a portal.
 |09 00 74 75 74 6F 72 69 61 6C 30|portal name "tutorial0"|
 |6C 00 35 00|skip|
 
-### CHANGE_KEYMAP
+### 0x7B CHANGE_KEYMAP
 When you change your keymap settings.
 
 |hex|desc|
@@ -134,7 +134,7 @@ When you change your keymap settings.
 |00|type (2)|
 |34 00 00 00|action (2)|
 
-### PLAYER_UPDATE
+### 0xC0 PLAYER_UPDATE
 Notify backend to save data.
 
 |hex|desc|
