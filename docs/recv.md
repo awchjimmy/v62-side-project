@@ -43,6 +43,14 @@ When you enter the Maple world.
 |31 75 00 00|character id|
 |00 00|skip|
 
+### STRANGE_DATA
+Not sure. Server does not response to it.
+
+|hex|desc|
+|----|----|
+|1A 00|opcode|
+|01 81 E6 03 E9 00 00 00 00|skip|
+
 ### RELOG
 When you exit game and go back to login screen.
 
