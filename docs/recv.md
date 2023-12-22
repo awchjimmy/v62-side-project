@@ -43,6 +43,14 @@ When you enter the Maple world.
 |31 75 00 00|character id|
 |00 00|skip|
 
+### CHECK_CHAR_NAME
+Check if the name is available or not when you create a new character.
+
+|hex|desc|
+|----|----|
+|15 00|opcode|
+|09 00 61 77 63 68 6A 69 6D 6D 79|character name "awchjimmy"|
+
 ### STRANGE_DATA
 Not sure. Server does not response to it.
 
