@@ -138,6 +138,14 @@ When you speak to the public with the white bubble background.
 |05 00 68 65 6C 6C 6F| message "hello" |
 |00| show            |
 
+### 0x30 FACE_EXPRESSION
+When you smile or frown or wink.
+
+|hex|desc|
+|----|----|
+|30 00|opcode|
+|04 00 00 00|expression id|
+
 ### 0x5C CHANGE_MAP_SPECIAL
 When you enter a portal.
 
