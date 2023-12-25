@@ -209,6 +209,17 @@ When you enter a portal.
 |09 00 74 75 74 6F 72 69 61 6C 30|portal name "tutorial0"|
 |6C 00 35 00|skip|
 
+### 0x62 QUEST_ACTION
+When you start or complete a quest.
+
+|hex|desc|
+|----|----|
+|62 00|opcode|
+|04|type|
+|FD 03|quest id 1021|
+|D0 07 00 00|npc id 2000|
+|34 F5 B4 00|skip|
+
 ### 0x7B CHANGE_KEYMAP
 When you change your keymap settings.
 
