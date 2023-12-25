@@ -177,6 +177,16 @@ When you move an item in inventory.
 |01 00|destination|
 |FF FF|checkq|
 
+### 0x43 USE_ITEM
+When you use an item in inventory.
+
+|hex|desc|
+|----|----|
+|43 00|opcode|
+|D7 B9 1D 00|skip|
+|02 00|slot|
+|97 AB 1E 00|item id 2010007|
+
 ### 0x51 HEAL_OVER_TIME
 You will heal over time.
 
