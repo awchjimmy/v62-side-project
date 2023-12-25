@@ -3,23 +3,13 @@ Brief installation guide
 
 > WARNING: This is NOT production ready!
 
-### Environment and software
-```
+### Setup
 1. OS: Windows 10 x64
-2. Java: JDK 7u80 (only jdk6 & jdk7 works)
-3. MySQL: XAMPP 8.2.12
-```
-
-### Configuration
-```
-1. unzip 'wz.7z'
-2. place 'US_export_policy.jar' and 'local_policy.jar' from /dist to system
-3. import sql
-```
+2. Java: install `jdk-7u80-windows-x64.exe` and run `jce7/copy_to_jre.bat`
+3. MySQL: install `xampp-windows-x64-8.2.12-0-VS16-installer.exe` and import `SQL/XiuzSource.sql`
+4. unzip `wz.7z`
 
 ### How to run
-```
-1. click all-in-one bat to start server
-2. click localhost to start client
+1. click `[XiuzSource] OneW.bat` to start server
+2. click `localhost.exe` to start client
 3. enjoy!
-```
