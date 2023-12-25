@@ -220,6 +220,15 @@ You will heal over time.
 |00 00|heal mp|
 |00|skip|
 
+### 0x52 DISTRIBUTE_SP
+When you distribute skill points.
+
+|hex|desc|
+|----|----|
+|52 00|opcode|
+|DF AA 5A 00|skip|
+|EA 03 00 00|skill id 1002|
+
 ### 0x56 MESO_DROP
 When you drop mesos.
 
