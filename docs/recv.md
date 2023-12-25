@@ -148,6 +148,26 @@ When you enter cash shop.
 |25 00|opcode|
 |ED A4 BB 00|skip|
 
+### 0x29 CLOSE_RANGE_ATTACK
+When you attack with close range skill.
+
+|hex|desc|
+|----|----|
+|29 00|opcode|
+|02|skip|
+|11|numAttackedAndDamage|
+|00 00 00 00|skill id|
+|00|skip|
+|06|stance|
+|01|skip|
+|04|speed|
+|3C 99 35 00|skip|
+|64 00 00 00|object id|
+|06 80 00 05 19 FF 58 00 17 FF 58 00 89 01|skip|
+|01 00 00 00|damage|
+|C4 BB FC FF|skip|
+|EB FE 48 00|skip|
+
 ### 0x2E GENERAL_CHAT
 When you speak to the public with the white bubble background.
 
