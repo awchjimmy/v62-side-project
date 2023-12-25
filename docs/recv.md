@@ -165,6 +165,18 @@ When you smile or frown or wink.
 |30 00|opcode|
 |04 00 00 00|expression id|
 
+### 0x42 ITEM_MOVE
+When you move an item in inventory.
+
+|hex|desc|
+|----|----|
+|42 00|opcode|
+|51 A9 1D 00|skip|
+|02|type|
+|02 00|source|
+|01 00|destination|
+|FF FF|checkq|
+
 ### 0x51 HEAL_OVER_TIME
 You will heal over time.
 
