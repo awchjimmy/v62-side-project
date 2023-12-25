@@ -207,6 +207,15 @@ When you use an item in inventory.
 |02 00|slot|
 |97 AB 1E 00|item id 2010007|
 
+### 0x50 DISTRIBUTE_AP
+When you distribute ability points.
+
+|hex|desc|
+|----|----|
+|50 00|opcode|
+|29 52 5A 00|skip|
+|80 00 00 00|which ability|
+
 ### 0x51 HEAL_OVER_TIME
 You will heal over time.
 
