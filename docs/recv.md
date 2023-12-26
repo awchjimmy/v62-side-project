@@ -185,6 +185,15 @@ When you smile or frown or wink.
 |30 00|opcode|
 |04 00 00 00|expression id|
 
+### 0x36 NPC_TALK
+When you talk to an NPC.
+
+|hex|desc|
+|----|----|
+|36 00|opcode|
+|64 00 00 00|object id|
+|6C 00 35 00|skip|
+
 ### 0x42 ITEM_MOVE
 When you move an item in inventory.
 
