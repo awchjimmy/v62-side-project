@@ -235,6 +235,16 @@ When you use an item in inventory.
 |02 00|slot|
 |97 AB 1E 00|item id 2010007|
 
+### 0x4E USE_RETURN_SCROLL
+When you go back to town using return scroll.
+
+|hex|desc|
+|----|----|
+|4E 00|opcode|
+|B9 12 4E 01|skip|
+|02 00|slot|
+|B0 F9 1E 00|item id 2030000|
+
 ### 0x50 DISTRIBUTE_AP
 When you distribute ability points.
 
