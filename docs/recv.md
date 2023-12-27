@@ -105,6 +105,13 @@ When you create a new character.
 |06|int|
 |05|luk|
 
+### 0x18 PONG
+Tell server you are not away from keyboard.
+
+|hex|desc|
+|----|----|
+|18 00|opcode|
+
 ### 0x1A STRANGE_DATA
 Not sure. Server does not response to it.
 
