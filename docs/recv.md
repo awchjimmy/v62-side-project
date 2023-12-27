@@ -201,6 +201,18 @@ When you talk to an NPC.
 |64 00 00 00|object id|
 |6C 00 35 00|skip|
 
+### 0x39 NPC_SHOP
+When you buy or sell items in the NPC shop.
+
+|hex|desc|
+|----|----|
+|39 00|opcode|
+|00|mode, 0: buy|
+|03 00|skip|
+|83 84 1E 00|item id 2000003|
+|14 00|quantity 20|
+|C8 00 00 00|skip, price 200|
+
 ### 0x42 ITEM_MOVE
 When you move an item in inventory.
 
