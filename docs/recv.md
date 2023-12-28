@@ -1,5 +1,13 @@
 # Recv
 
+### 0x02 GUEST_LOGIN
+When you click 'Guest Login' on login screen.
+
+|hex|desc|
+|----|----|
+|02 00|opcode|
+|00 00|skip|
+
 ### 0x04 SERVERLIST_REREQUEST
 You click 'Back' from character selection screen.
 
