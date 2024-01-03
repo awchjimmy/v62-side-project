@@ -1,2 +1,8 @@
+# subversion files
 .svn/
+
+# wz xml files
 wz/
+
+# java runtime environment
+jre7/

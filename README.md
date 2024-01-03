@@ -5,7 +5,7 @@ Brief installation guide
 
 ### Setup
 1. OS: Windows 10 x64
-2. Java: install `jdk-7u80-windows-x64.exe` and run `jce7/copy_to_jre.bat`
+2. Java: unzip `jre7.7z`
 3. MySQL: install `xampp-windows-x64-8.2.12-0-VS16-installer.exe` and import `SQL/XiuzSource.sql`
 4. unzip `wz.7z`
 
