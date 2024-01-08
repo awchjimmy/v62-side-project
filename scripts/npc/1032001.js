@@ -26,7 +26,8 @@
 	Custom Quest 100006, 100008, 100100, 100101
 */
 
-importPackage(net.sf.odinms.client);
+var MapleJob = Java.type("net.sf.odinms.client.MapleJob");
+var MapleQuestStatus = Java.type("net.sf.odinms.client.MapleQuestStatus");
 
 var status = 0;
 var job;
@@ -50,7 +51,7 @@ function action(mode, type, selection) {
 		else
 			status--;
 		if (status == 0) {
-			if (cm.getJob().equals(net.sf.odinms.client.MapleJob.BEGINNER)) {
+			if (cm.getJob().equals(MapleJob.BEGINNER)) {
 				if (cm.getLevel() >= 8 && cm.getChar().getInt() >= 20)
 					cm.sendNext("So you decided to become a #rMagician#k?");
 				else {
@@ -59,12 +60,12 @@ function action(mode, type, selection) {
 				}
 			} else {
 				if (cm.getLevel() >= 30 
-					&& cm.getJob().equals(net.sf.odinms.client.MapleJob.MAGICIAN)) {
+					&& cm.getJob().equals(MapleJob.MAGICIAN)) {
 					if (cm.getQuestStatus(100006).getId() >=
-						net.sf.odinms.client.MapleQuestStatus.Status.STARTED.getId()) {
+						MapleQuestStatus.Status.STARTED.getId()) {
 						cm.completeQuest(100008);
 						if (cm.getQuestStatus(100008) ==
-						 net.sf.odinms.client.MapleQuestStatus.Status.COMPLETED) {
+						    MapleQuestStatus.Status.COMPLETED) {
 							status = 20;
 							cm.sendNext("I see you have done well. I will allow you to take the next step on your long road.");
 						} else {
@@ -94,8 +95,8 @@ function action(mode, type, selection) {
 		} else if (status == 2) {
 			cm.sendYesNo("Do you want to become a #rMagician#k?");
 		} else if (status == 3) {
-			if (cm.getJob().equals(net.sf.odinms.client.MapleJob.BEGINNER))
-				cm.changeJob(net.sf.odinms.client.MapleJob.MAGICIAN);
+			if (cm.getJob().equals(MapleJob.BEGINNER))
+				cm.changeJob(MapleJob.MAGICIAN);
 			cm.gainItem(1372005, 1);
 			cm.sendOk("So be it! Now go, and go with pride.");
 			cm.dispose();
@@ -116,13 +117,13 @@ function action(mode, type, selection) {
 			var jobName;
 			if (selection == 0) {
 				jobName = "Fire/Poison Wizard";
-				job = net.sf.odinms.client.MapleJob.FP_WIZARD;
+				job = MapleJob.FP_WIZARD;
 			} else if (selection == 1) {
 				jobName = "Ice/Lightning Wizard";
-				job = net.sf.odinms.client.MapleJob.IL_WIZARD;
+				job = MapleJob.IL_WIZARD;
 			} else {
 				jobName = "Cleric";
-				job = net.sf.odinms.client.MapleJob.CLERIC;
+				job = MapleJob.CLERIC;
 			}
 			cm.sendYesNo("Do you want to become a #r" + jobName + "#k?");
 		} else if (status == 23) {
