@@ -293,6 +293,16 @@ When you drop mesos.
 |3A F9 A4 00|skip|
 |0A 00 00 00|meso|
 
+### 0x59 CHAR_INFO_REQUEST
+When you double click on a character.
+
+|hex|desc|
+|----|----|
+|59 00|opcode|
+|9E 06 0B 00|skip|
+|31 75 00 00|character id|
+|00|skip|
+
 ### 0x5C CHANGE_MAP_SPECIAL
 When you enter a portal.
 
