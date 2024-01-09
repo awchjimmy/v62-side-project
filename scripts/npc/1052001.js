@@ -26,10 +26,11 @@
 	Custom Quest 100009, 100011
 */
 
+var MapleJob = Java.type("net.sf.odinms.client.MapleJob");
+var MapleQuestStatus = Java.type("net.sf.odinms.client.MapleQuestStatus");
+
 var status = 0;
 var job;
-
-importPackage(net.sf.odinms.client);
 
 function start() {
 	status = -1;
@@ -50,7 +51,7 @@ function action(mode, type, selection) {
 		else
 			status--;
 		if (status == 0) {
-			if (cm.getJob().equals(net.sf.odinms.client.MapleJob.BEGINNER)) {
+			if (cm.getJob().equals(MapleJob.BEGINNER)) {
 				if (cm.getLevel() >= 10 && cm.getChar().getDex() >= 25)
 					cm.sendNext("So you decided to become a #rThief#k?");
 				else {
@@ -59,12 +60,12 @@ function action(mode, type, selection) {
 				}
 			} else {
 				if (cm.getLevel() >= 30 
-					&& cm.getJob().equals(net.sf.odinms.client.MapleJob.THIEF)) {
+					&& cm.getJob().equals(MapleJob.THIEF)) {
 					if (cm.getQuestStatus(100009).getId() >=
-						net.sf.odinms.client.MapleQuestStatus.Status.STARTED.getId()) {
+						MapleQuestStatus.Status.STARTED.getId()) {
 						cm.completeQuest(100011);
 						if (cm.getQuestStatus(100011) ==
-						 net.sf.odinms.client.MapleQuestStatus.Status.COMPLETED) {
+						 MapleQuestStatus.Status.COMPLETED) {
 							status = 20;
 							cm.sendNext("I see you have done well. I will allow you to take the next step on your long road.");
 						} else {
@@ -94,8 +95,8 @@ function action(mode, type, selection) {
 		} else if (status == 2) {
 			cm.sendYesNo("Do you want to become a #rThief#k?");
 		} else if (status == 3) {
-			if (cm.getJob().equals(net.sf.odinms.client.MapleJob.BEGINNER))
-				cm.changeJob(net.sf.odinms.client.MapleJob.THIEF);
+			if (cm.getJob().equals(MapleJob.BEGINNER))
+				cm.changeJob(MapleJob.THIEF);
 			cm.gainItem(1472000,1);
 			cm.gainItem(2070015,500);
 			cm.sendOk("So be it! Now go, and go with pride.");
@@ -117,10 +118,10 @@ function action(mode, type, selection) {
 			var jobName;
 			if (selection == 0) {
 				jobName = "Assassin";
-				job = net.sf.odinms.client.MapleJob.ASSASSIN;
+				job = MapleJob.ASSASSIN;
 			} else {
 				jobName = "Bandit";
-				job = net.sf.odinms.client.MapleJob.BANDIT;
+				job = MapleJob.BANDIT;
 			}
 			cm.sendYesNo("Do you want to become a #r" + jobName + "#k?");
 		} else if (status == 23) {
